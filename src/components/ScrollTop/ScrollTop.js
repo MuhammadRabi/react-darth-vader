@@ -1,31 +1,37 @@
-import React, { useState } from "react";
-import "./scrolltop.scss";
+import React, { useState, useEffect } from "react"
+import styles from "./scrolltop.module.scss"
+
 const ScrollTop = () => {
-  const [showBtn, setShowBtn] = useState(false);
+  const [isActive, setIsActive] = useState(false)
 
-  const scrollBtnVisible = () => {
-    window.scrollY >= 600 ? setShowBtn(true) : setShowBtn(false);
-  };
+  useEffect(() => {
+    const scrollBtnVisible = () => {
+      window.scrollY >= 600 ? setIsActive(true) : setIsActive(false)
+    }
 
-  window.addEventListener("scroll", scrollBtnVisible);
+    window.addEventListener("scroll", scrollBtnVisible)
+    // clean up function
+    return () => {
+      window.removeEventListener("scroll")
+    }
+  }, [])
 
   const clickHandler = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
-    });
-  };
-
+    })
+  }
   return (
     <>
       <div
-        className={`scroll-to-top ${showBtn && "active"}`}
+        className={`${styles["scroll-to-top"]} ${isActive && styles.active}`}
         onClick={clickHandler}
       >
         <i className="fas fa-arrow-up"></i>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default ScrollTop;
+export default ScrollTop

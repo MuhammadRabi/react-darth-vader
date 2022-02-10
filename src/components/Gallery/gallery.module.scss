@@ -11,7 +11,7 @@
 
 .gallery {
   background-color: #e6e6e7;
-  .container {
+  .grid-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
@@ -48,28 +48,4 @@
       }
     }
   }
-}
-
-.price-plans,
-.works,
-.articles,
-.stats,
-.services,
-.news,
-.testimonial,
-.gallery,
-.skills {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
-}
-
-.section-title {
-  border: 2px solid #000;
-  width: fit-content;
-  margin: 5px auto 75px;
-  border-radius: 2px;
-  color: #000;
-  padding: 10px 20px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
 }

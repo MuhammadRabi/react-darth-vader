@@ -1,13 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 import GalleryBox from "./GalleryBox";
-import "./gallery.scss";
+import styles from "./gallery.module.scss";
 
-class Gallery extends Component {
-  render() {
-    return (
-      <section className="gallery" id="gallery">
-        <h2 className="section-title">gallery</h2>
-        <div className="container">
+const Gallery = () => {
+  return (
+    <section className={styles.gallery} id="gallery">
+      <h2 className="section-title">gallery</h2>
+      <div className="container">
+        <div className={styles["grid-content"]}>
           <GalleryBox img="https://picsum.photos/id/10/700" />
           <GalleryBox img="https://picsum.photos/id/20/700" />
           <GalleryBox img="https://picsum.photos/id/30/700" />
@@ -19,9 +19,9 @@ class Gallery extends Component {
           <GalleryBox img="https://picsum.photos/id/45/700" />
           <GalleryBox img="https://picsum.photos/id/57/700" />
         </div>
-      </section>
-    );
-  }
-}
+      </div>
+    </section>
+  );
+};
 
 export default Gallery;

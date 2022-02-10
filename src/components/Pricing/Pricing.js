@@ -1,13 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 import PricingCard from "./PricingCard";
-import "./pricing.scss";
+import styles from "./pricing.module.scss";
 
-class Pricing extends Component {
-  render() {
-    return (
-      <section id="price-plans" className="price-plans">
-        <h2 className="section-title">price plans</h2>
-        <div className="container">
+const Pricing = () => {
+  return (
+    <section id="price-plans" className={styles["price-plans"]}>
+      <h2 className="section-title">price plans</h2>
+      <div className="container">
+        <div className={styles["grid-content"]}>
           <PricingCard
             title="basic"
             price="$25"
@@ -36,9 +36,9 @@ class Pricing extends Component {
             support="premium"
           />
         </div>
-      </section>
-    );
-  }
-}
+      </div>
+    </section>
+  );
+};
 
 export default Pricing;

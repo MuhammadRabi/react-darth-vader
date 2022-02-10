@@ -1,21 +1,25 @@
-import { useState } from "react";
-import Nav from "./Nav";
-import "./header.scss";
+import { useState, useEffect } from "react"
+import Nav from "./Nav"
+import "./header.scss"
 
 const Header = () => {
-  const [fixedNav, setFixedNav] = useState("false");
+  const [fixedNav, setFixedNav] = useState("false")
 
-  const showFixedNav = () => {
-    window.scrollY > 600 ? setFixedNav(true) : setFixedNav(false);
-  };
+  useEffect(() => {
+    /*  const showFixedNav = () => {
+      window.scrollY > 600 ? setFixedNav(true) : setFixedNav(false)
+    } */
 
-  window.addEventListener("scroll", showFixedNav);
+    window.addEventListener("scroll", () => {
+      window.scrollY > 300 ? setFixedNav(true) : setFixedNav(false)
+    })
 
-  const [mobileNav, setMobileNav] = useState(false);
+    return () => {
+      window.removeEventListener("scroll")
+    }
+  }, [])
 
-  const mobileNavHandler = () => {
-    setMobileNav(!mobileNav);
-  };
+  const [mobileNav, setMobileNav] = useState(false)
 
   return (
     <header className={fixedNav && "fixed-nav"}>
@@ -34,14 +38,14 @@ const Header = () => {
         </nav>
         <div
           className={`nav-toggle ${mobileNav && "active"}`}
-          onClick={() => setMobileNav(mobileNavHandler)}
+          onClick={() => setMobileNav(!mobileNav)}
         >
           <i className="fas fa-bars"></i>
           <i className="fas fa-times"></i>
         </div>
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

@@ -1,13 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 import ArticleBox from "./ArticleBox";
-import "./articles.scss";
+import styles from "./articles.module.scss";
 
-class Articles extends Component {
-  render() {
-    return (
-      <section id="articles" className="articles">
-        <h2 className="section-title">articles</h2>
-        <div className="container">
+const Articles = () => {
+  return (
+    <section id="articles" className={styles.articles}>
+      <h2 className="section-title">articles</h2>
+      <div className="container">
+        <div className={styles["grid-content"]}>
           <ArticleBox
             img="https://picsum.photos/id/19/700"
             title="trivia games"
@@ -47,7 +47,7 @@ class Articles extends Component {
           <ArticleBox
             img="https://picsum.photos/id/79/700"
             title="trivia games"
-            text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab culpa
+            text="Lorem ipsum, dolor sit amet con0sectetur adipisicing elit. Ab culpa
             qui impedit, aperiam asperiores quia?"
           />
           <ArticleBox
@@ -57,9 +57,9 @@ class Articles extends Component {
             qui impedit, aperiam asperiores quia?"
           />
         </div>
-      </section>
-    );
-  }
-}
+      </div>
+    </section>
+  );
+};
 
 export default Articles;
