@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import styles from "./scrolltop.module.scss"
+import "./scrolltop.scss"
 
 const ScrollTop = () => {
   const [isActive, setIsActive] = useState(false)
@@ -25,7 +25,7 @@ const ScrollTop = () => {
   return (
     <>
       <div
-        className={`${styles["scroll-to-top"]} ${isActive && styles.active}`}
+        className={`scroll-to-top ${isActive && "active"}`}
         onClick={clickHandler}
       >
         <i className="fas fa-arrow-up"></i>

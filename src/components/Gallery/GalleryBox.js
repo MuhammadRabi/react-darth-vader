@@ -1,14 +1,14 @@
-import React from "react";
-import styles from "./gallery.module.scss";
+import React from "react"
+import "./gallery.scss"
 
 const GalleryBox = (props) => {
   return (
-    <div className={styles.box}>
+    <div className="box">
       <figure>
         <img src={props.img} alt="img" />
       </figure>
     </div>
-  );
-};
+  )
+}
 
-export default GalleryBox;
+export default GalleryBox

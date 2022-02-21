@@ -1,13 +1,13 @@
-import React from "react";
-import ArticleBox from "./ArticleBox";
-import styles from "./articles.module.scss";
+import React from "react"
+import ArticleBox from "./ArticleBox"
+import "./articles.scss"
 
 const Articles = () => {
   return (
-    <section id="articles" className={styles.articles}>
+    <section id="articles" className="articles">
       <h2 className="section-title">articles</h2>
       <div className="container">
-        <div className={styles["grid-content"]}>
+        <div className="grid-content">
           <ArticleBox
             img="https://picsum.photos/id/19/700"
             title="trivia games"
@@ -59,7 +59,7 @@ const Articles = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Articles;
+export default Articles

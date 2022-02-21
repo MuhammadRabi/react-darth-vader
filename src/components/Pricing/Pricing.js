@@ -1,13 +1,13 @@
-import React from "react";
-import PricingCard from "./PricingCard";
-import styles from "./pricing.module.scss";
+import React from "react"
+import PricingCard from "./PricingCard"
+import "./pricing.scss"
 
 const Pricing = () => {
   return (
-    <section id="price-plans" className={styles["price-plans"]}>
+    <section id="price-plans" className="price-plans">
       <h2 className="section-title">price plans</h2>
       <div className="container">
-        <div className={styles["grid-content"]}>
+        <div className="grid-content">
           <PricingCard
             title="basic"
             price="$25"
@@ -38,7 +38,7 @@ const Pricing = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Pricing;
+export default Pricing

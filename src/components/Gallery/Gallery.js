@@ -1,13 +1,13 @@
-import React from "react";
-import GalleryBox from "./GalleryBox";
-import styles from "./gallery.module.scss";
+import React from "react"
+import GalleryBox from "./GalleryBox"
+import "./gallery.scss"
 
 const Gallery = () => {
   return (
-    <section className={styles.gallery} id="gallery">
+    <section className="gallery" id="gallery">
       <h2 className="section-title">gallery</h2>
       <div className="container">
-        <div className={styles["grid-content"]}>
+        <div className="grid-content">
           <GalleryBox img="https://picsum.photos/id/10/700" />
           <GalleryBox img="https://picsum.photos/id/20/700" />
           <GalleryBox img="https://picsum.photos/id/30/700" />
@@ -21,7 +21,7 @@ const Gallery = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Gallery;
+export default Gallery

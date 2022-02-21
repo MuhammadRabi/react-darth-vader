@@ -1,6 +1,6 @@
-import React from "react";
-import WorksCard from "./WorksCard";
-import "./works.scss";
+import React from "react"
+import WorksCard from "./WorksCard"
+import "./works.scss"
 
 const Works = () => {
   return (
@@ -27,7 +27,7 @@ const Works = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Works;
+export default Works

@@ -6,10 +6,6 @@ const Header = () => {
   const [fixedNav, setFixedNav] = useState("false")
 
   useEffect(() => {
-    /*  const showFixedNav = () => {
-      window.scrollY > 600 ? setFixedNav(true) : setFixedNav(false)
-    } */
-
     window.addEventListener("scroll", () => {
       window.scrollY > 300 ? setFixedNav(true) : setFixedNav(false)
     })
