@@ -1,34 +1,29 @@
-import React from "react";
-import Header from "./components/Header/Header";
-import Hero from "./components/Hero/Hero";
-import Articles from "./components/Articles/Articles";
-import Gallery from "./components/Gallery/Gallery";
-import Pricing from "./components/Pricing/Pricing";
-import Services from "./components/Services/Services";
-import Stats from "./components/Stats/Stats";
-import Testimonials from "./components/Testimonials/Testimonials";
-import Works from "./components/Works/Works";
-import Skills from "./components/Skills/Skills";
-import Footer from "./components/Footer/footer";
-import ScrollTop from "./components/ScrollTop/ScrollTop";
+import React from "react"
+import Header from "./components/Header/Header"
+import Footer from "./components/Footer/footer"
+import ScrollTop from "./components/ScrollTop/ScrollTop"
+import Homepage from "./Pages/Homepage"
+import SecondPage from "./Pages/SecondPage"
+import ThirdPage from "./Pages/ThirdPage"
+import FourthPage from "./Pages/FourthPage"
+import { Routes, Route } from "react-router-dom"
 
 const App = () => {
   return (
     <>
       <Header />
-      <Hero />
-      <Articles />
-      <Gallery />
-      <Pricing />
-      <Services />
-      <Testimonials />
-      <Stats />
-      <Works />
-      <Skills />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="secondpage" element={<SecondPage />} />
+        <Route path="thirdpage" element={<ThirdPage />} />
+        <Route path="fourthpage" element={<FourthPage />} />
+        {/*         <Route path="*" element={<NoMatch />} />
+         */}
+      </Routes>
       <ScrollTop />
+      <Footer />
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App

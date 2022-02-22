@@ -1,12 +1,12 @@
-import "./hero.scss";
-import hero from "../../img/hero.svg";
+import "./hero.scss"
+import hero from "../../img/hero.svg"
 
 const Hero = () => {
   return (
     <section id="home" className="hero">
       <div className="container">
         <main>
-          <h1>welcome to elzero world</h1>
+          <h1>welcome to React js world</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia,
             minima?
@@ -20,7 +20,7 @@ const Hero = () => {
         <i className="fas fa-angle-double-down"></i>
       </a>
     </section>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero
