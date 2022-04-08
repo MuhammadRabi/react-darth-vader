@@ -7,7 +7,7 @@ const Pricing = () => {
     <section id="price-plans" className="price-plans">
       <h2 className="section-title">price plans</h2>
       <div className="container">
-        <div className="grid-content">
+        <div className="row">
           <PricingCard
             title="basic"
             price="$25"

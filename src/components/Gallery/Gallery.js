@@ -7,7 +7,7 @@ const Gallery = () => {
     <section className="gallery" id="gallery">
       <h2 className="section-title">gallery</h2>
       <div className="container">
-        <div className="grid-content">
+        <div className="row">
           <GalleryBox img="https://picsum.photos/id/10/700" />
           <GalleryBox img="https://picsum.photos/id/20/700" />
           <GalleryBox img="https://picsum.photos/id/30/700" />
