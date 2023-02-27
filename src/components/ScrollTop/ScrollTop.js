@@ -12,7 +12,7 @@ const ScrollTop = () => {
     window.addEventListener("scroll", scrollBtnVisible)
     // clean up function
     return () => {
-      window.removeEventListener("scroll")
+      window.removeEventListener("scroll", scrollBtnVisible)
     }
   }, [])
 

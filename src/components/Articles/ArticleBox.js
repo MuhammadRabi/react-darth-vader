@@ -1,13 +1,12 @@
-import React from "react"
 import "./articles.scss"
 
-const ArticleBox = (props) => {
+const ArticleBox = ({ img, title, text }) => {
   return (
     <article>
-      <img src={props.img} alt="" />
+      <img src={img} alt="" />
       <div className="content">
-        <h3 className="title">{props.title}</h3>
-        <p>{props.text}</p>
+        <h3 className="title">{title}</h3>
+        <p>{text}</p>
       </div>
       <div className="read-more">
         <a href="#gallery">read more</a>

@@ -1,15 +1,13 @@
-import React from "react";
-
-const StatsBox = (props) => {
+const StatsBox = ({ icon, title, target }) => {
   return (
     <div className="stats-box">
-      <i className={props.icon}></i>
-      <span className="count" data-goal={props.target}>
+      <i className={icon}></i>
+      <span className="count" data-goal={target}>
         0
       </span>
-      <span className="name">{props.title}</span>
+      <span className="name">{title}</span>
     </div>
-  );
-};
+  )
+}
 
-export default StatsBox;
+export default StatsBox

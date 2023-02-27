@@ -1,8 +1,8 @@
-import React from "react"
 import Articles from "../components/Articles/Articles"
 import Services from "../components/Services/Services"
 import Works from "../components/Works/Works"
-function SecondPage() {
+
+const ArticlesPage = () => {
   return (
     <>
       <Articles />
@@ -12,4 +12,4 @@ function SecondPage() {
   )
 }
 
-export default SecondPage
+export default ArticlesPage

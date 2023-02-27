@@ -1,4 +1,3 @@
-import React from "react"
 import "./works.scss"
 
 const WorksCard = ({ img, title }) => {

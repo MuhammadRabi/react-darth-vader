@@ -1,11 +1,9 @@
-import React from "react";
-
-const SocialIcon = (props) => {
+const SocialIcon = ({ website, icon }) => {
   return (
-    <a href={props.website}>
-      <i className={props.icon}></i>
+    <a href={website}>
+      <i className={icon}></i>
     </a>
-  );
-};
+  )
+}
 
-export default SocialIcon;
+export default SocialIcon

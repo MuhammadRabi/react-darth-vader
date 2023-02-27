@@ -1,6 +1,5 @@
-import React from "react";
-import StatsBox from "./StatsBox";
-import "./stats.scss";
+import StatsBox from "./StatsBox"
+import "./stats.scss"
 
 const Stats = () => {
   return (
@@ -13,7 +12,7 @@ const Stats = () => {
         <StatsBox icon="fas fa-money-check-alt" target="25" title="income" />
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Stats;
+export default Stats

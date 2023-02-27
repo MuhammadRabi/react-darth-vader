@@ -1,7 +1,10 @@
-import React from "react"
-
+import Services from "../components/Services/Services"
 function FourthPage() {
-  return <h1>this is page #4</h1>
+  return (
+    <>
+      <Services />
+    </>
+  )
 }
 
 export default FourthPage

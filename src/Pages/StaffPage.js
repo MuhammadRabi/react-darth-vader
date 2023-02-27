@@ -1,9 +1,8 @@
-import React from "react"
 import Stats from "../components/Stats/Stats"
 import Testimonials from "../components/Testimonials/Testimonials"
 import Skills from "../components/Skills/Skills"
 
-function ThirdPage() {
+const StaffPage = () => {
   return (
     <>
       <Stats />
@@ -13,4 +12,4 @@ function ThirdPage() {
   )
 }
 
-export default ThirdPage
+export default StaffPage

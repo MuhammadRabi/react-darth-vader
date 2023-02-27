@@ -1,29 +1,36 @@
-import React from "react"
-import Header from "./components/Header/Header"
-import Footer from "./components/Footer/footer"
-import ScrollTop from "./components/ScrollTop/ScrollTop"
 import Homepage from "./Pages/Homepage"
-import SecondPage from "./Pages/SecondPage"
-import ThirdPage from "./Pages/ThirdPage"
+import ArticlesPage from "./Pages/ArticlesPage"
+import StaffPage from "./Pages/StaffPage"
 import FourthPage from "./Pages/FourthPage"
-import { Routes, Route } from "react-router-dom"
+import Root from "./Pages/Root"
+
+import { RouterProvider, createBrowserRouter } from "react-router-dom"
 
 const App = () => {
-  return (
-    <>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="secondpage" element={<SecondPage />} />
-        <Route path="thirdpage" element={<ThirdPage />} />
-        <Route path="fourthpage" element={<FourthPage />} />
-        {/*         <Route path="*" element={<NoMatch />} />
-         */}
-      </Routes>
-      <ScrollTop />
-      <Footer />
-    </>
-  )
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Root />,
+      children: [
+        { index: true, element: <Homepage /> },
+
+        {
+          path: "articles",
+          element: <ArticlesPage />,
+        },
+        {
+          path: "staff",
+          element: <StaffPage />,
+        },
+        {
+          path: "about",
+          element: <FourthPage />,
+        },
+      ],
+    },
+  ])
+
+  return <RouterProvider router={router} />
 }
 
 export default App

@@ -17,18 +17,18 @@ function Navbar() {
             </Link>
           </li>
           <li className="nav__item">
-            <Link to="secondpage" className="nav__link">
-              Second
+            <Link to="articles" className="nav__link">
+              Articles
             </Link>
           </li>
           <li className="nav__item">
-            <Link to="thirdpage" className="nav__link">
-              Third
+            <Link to="staff" className="nav__link">
+              Staff
             </Link>
           </li>
           <li className="nav__item">
-            <Link to="fourthpage" className="nav__link">
-              Fourth
+            <Link to="about" className="nav__link">
+              About us
             </Link>
           </li>
         </ul>

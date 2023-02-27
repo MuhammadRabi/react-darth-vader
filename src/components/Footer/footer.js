@@ -1,9 +1,8 @@
-import React from "react";
-import "./footer.scss";
-import SocialIcon from "./SocialIcon";
-import Link from "./Link";
-import ContactLine from "./ContactLine";
-import PixCard from "./PixCard";
+import "./footer.scss"
+import SocialIcon from "./SocialIcon"
+import Link from "./Link"
+import ContactLine from "./ContactLine"
+import PixCard from "./PixCard"
 
 const Footer = () => {
   return (
@@ -52,10 +51,10 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
 
 /* 
 <footer>

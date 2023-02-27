@@ -1,5 +1,3 @@
-import React from "react";
-
 const ContactLine = () => {
   return (
     <div>
@@ -16,7 +14,7 @@ const ContactLine = () => {
         <p>+20123456789 +20198765432</p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ContactLine;
+export default ContactLine

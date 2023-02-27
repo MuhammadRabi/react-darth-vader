@@ -1,14 +1,14 @@
-const SkillItem = (props) => {
+const SkillItem = ({ title, progress }) => {
   return (
     <div className="skill">
       <h3>
-        {props.title} <span>{props.progress}</span>
+        {title} <span>{progress}</span>
       </h3>
       <div className="progress">
-        <span data-width={props.progress}></span>
+        <span data-width={progress}></span>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SkillItem;
+export default SkillItem

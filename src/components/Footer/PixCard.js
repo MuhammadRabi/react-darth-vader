@@ -1,7 +1,5 @@
-import React from "react";
+const PixCard = ({ img }) => {
+  return <img src={img} alt="img" />
+}
 
-const PixCard = (props) => {
-  return <img src={props.img} alt="img" />;
-};
-
-export default PixCard;
+export default PixCard

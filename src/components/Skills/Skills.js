@@ -1,6 +1,6 @@
-import SkillItem from "./SkillItem";
-import "./skills.scss";
-import skillsBanner from "../../img/skills.svg";
+import SkillItem from "./SkillItem"
+import "./skills.scss"
+import skillsBanner from "../../img/skills.svg"
 
 const Skills = () => {
   return (
@@ -16,7 +16,7 @@ const Skills = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Skills;
+export default Skills

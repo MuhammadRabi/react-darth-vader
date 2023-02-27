@@ -1,6 +1,5 @@
-import React from "react";
-import ServiceBox from "./ServiceBox";
-import "./services.scss";
+import ServiceBox from "./ServiceBox"
+import "./services.scss"
 
 const Services = () => {
   return (
@@ -15,7 +14,7 @@ const Services = () => {
         <ServiceBox icon="fas fa-screwdriver" title="troubleshooting" />
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Services;
+export default Services

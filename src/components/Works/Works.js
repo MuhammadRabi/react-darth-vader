@@ -1,4 +1,3 @@
-import React from "react"
 import WorksCard from "./WorksCard"
 import "./works.scss"
 
