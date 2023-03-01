@@ -1,7 +1,7 @@
-const Link = () => {
+const Link = ({ url, title }) => {
   return (
     <li>
-      <a href="#articles">important link 1</a>
+      <a href={url}>{title}</a>
     </li>
   )
 }

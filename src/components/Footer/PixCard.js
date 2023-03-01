@@ -1,5 +1,5 @@
-const PixCard = ({ img }) => {
-  return <img src={img} alt="img" />
+const PixCard = ({ url }) => {
+  return <img src={url} alt="url" />
 }
 
 export default PixCard

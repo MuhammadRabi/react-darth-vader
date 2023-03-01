@@ -1,21 +1,28 @@
 import SectionTitle from "../UI/SectionTitle"
 import ArticleBox from "./ArticleBox"
-import "./articles.scss"
 import articlesData from "./articlesData"
+import styled from "styled-components"
 
 const Articles = () => {
   return (
-    <section id="articles" className="articles">
+    <ArticlesWrapper id="articles" className="articles">
       <SectionTitle title="articles" />
       <div className="container">
-        <div className="grid-content">
-          {articlesData.map((article) => {
-            return <ArticleBox key={article.id} {...article} />
-          })}
-        </div>
+        {articlesData.map((article) => {
+          return <ArticleBox key={article.id} {...article} />
+        })}
       </div>
-    </section>
+    </ArticlesWrapper>
   )
 }
 
 export default Articles
+
+const ArticlesWrapper = styled.section`
+  background-color: #ececec;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 40px;
+  }
+`

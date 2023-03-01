@@ -1,11 +1,12 @@
 import SkillItem from "./SkillItem"
-import "./skills.scss"
-import skillsBanner from "../../img/skills.svg"
+import skillsBanner from "../../assets/skills.svg"
+import styled from "styled-components"
+import SectionTitle from "../UI/SectionTitle"
 
 const Skills = () => {
   return (
-    <section id="skills" className="skills">
-      <h2 className="section-title">skills</h2>
+    <SkillsWrapper id="skills">
+      <SectionTitle title="skills" />
       <div className="container">
         <img src={skillsBanner} alt="" />
         <div className="skills-content">
@@ -15,8 +16,29 @@ const Skills = () => {
           <SkillItem title="front-end skills" progress="90%" />
         </div>
       </div>
-    </section>
+    </SkillsWrapper>
   )
 }
 
 export default Skills
+
+const SkillsWrapper = styled.section`
+  .container {
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px;
+  }
+  img {
+    width: 300px;
+  }
+  .skills-content {
+    padding: 10px 5px;
+    flex: 0.75;
+    /*  @include media-breakpoint-up(md) {
+      padding: 10px 45px;
+    } */
+  }
+`

@@ -1,6 +1,5 @@
-/* import "./hero.scss"
- */ import hero from "../../img/hero.svg"
-import styled from "styled-components"
+import hero from "../../assets/hero.svg"
+import styled, { keyframes } from "styled-components"
 
 const Hero = () => {
   return (
@@ -26,6 +25,30 @@ const Hero = () => {
 
 export default Hero
 
+const upAndDown = keyframes`
+       0%,
+        100% {
+          top: 0;
+        }
+        50% {
+          top: -50px;
+        }
+      `
+const bouncing = keyframes`
+        0%,
+  10%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40%,
+  60% {
+    transform: translateY(-20px);
+  }
+      `
+
 const Wrapper = styled.section`
   position: relative;
   .container {
@@ -35,23 +58,27 @@ const Wrapper = styled.section`
     align-items: center;
     flex-wrap: wrap;
     h1 {
-      font-size: 48px;
+      font-size: clamp(24px, 6vw, 48px);
       text-transform: capitalize;
       color: #000;
     }
-      img {
-        position: relative;
-        width: 500px;
-        animation: up-and-down 5s linear infinite;
-  }
-  .go-down {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    i {
-      font-size: 32px;
-      color: var(--main-service-color);
-      animation: bouncing 1.5s infinite;
+    img {
+      position: relative;
+      width: 500px;
+      animation: ${upAndDown} 5s linear infinite;
+      @media screen and (max-width: 768px) {
+        width: 300px;
+      }
+    }
+    .go-down {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      i {
+        font-size: 32px;
+        color: var(--main-service-color);
+        animation: ${bouncing} 1.5s infinite;
+      }
     }
   }
 `

@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 
 const GalleryBox = ({ img }) => {
   return (
@@ -16,10 +16,22 @@ const GalleryBox = ({ img }) => {
 
 export default GalleryBox
 
+const flashing = keyframes`
+     0%,
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 200%;
+    height: 200%;
+  }
+      `
+
 const Wrapper = styled.div`
   .box {
-    margin-bottom: 16px;
-    padding: 16px;
+    margin-bottom: 8px;
+    padding: 8px;
     background-color: #fff;
     position: relative;
     box-shadow: 0px 12px 20px 0px rgb(0 0 0 /13%),
@@ -42,10 +54,11 @@ const Wrapper = styled.div`
         z-index: 2;
       }
       &:hover:before {
-        animation: flashing 0.7s;
+        animation: ${flashing} 0.7s;
       }
       img {
-        transition: $mainTransition;
+        display: flex;
+        transition: 0.3s ease-in-out;
       }
       &:hover img {
         transform: rotate(2deg) scale(1.1);

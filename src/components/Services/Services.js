@@ -1,10 +1,11 @@
 import ServiceBox from "./ServiceBox"
-import "./services.scss"
+import styled from "styled-components"
+import SectionTitle from "../UI/SectionTitle"
 
 const Services = () => {
   return (
-    <section className="services" id="services">
-      <h2 className="section-title">services</h2>
+    <ServiceWrapper id="services">
+      <SectionTitle title="services" />
       <div className="container">
         <ServiceBox icon="fas fa-fingerprint" title="security" />
         <ServiceBox icon="fas fa-map-marked-alt" title="location" />
@@ -13,8 +14,17 @@ const Services = () => {
         <ServiceBox icon="fas fa-money-check-alt" title="technology" />
         <ServiceBox icon="fas fa-screwdriver" title="troubleshooting" />
       </div>
-    </section>
+    </ServiceWrapper>
   )
 }
 
 export default Services
+
+const ServiceWrapper = styled.section`
+  background-color: #ececec;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 50px;
+  }
+`

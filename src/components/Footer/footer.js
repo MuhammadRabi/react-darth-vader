@@ -1,85 +1,145 @@
-import "./footer.scss"
 import SocialIcon from "./SocialIcon"
 import Link from "./Link"
 import ContactLine from "./ContactLine"
 import PixCard from "./PixCard"
+import { socialIconsData, footerImages, footerLinks } from "./footerData"
+import styled from "styled-components"
 
 const Footer = () => {
   return (
-    <footer>
+    <FooterWrapper>
       <div className="container">
-        <div className="logo">
+        <article>
           <a href="#articles" className="main-logo">
             ELZERO
           </a>
           <div className="socials">
-            <SocialIcon
-              website="https://www.facebook.com/"
-              icon="fab fa-facebook-f"
-            />
-            <SocialIcon
-              website="https://twitter.com/home"
-              icon="fab fa-twitter"
-            />
-            <SocialIcon
-              website="https://www.youtube.com/"
-              icon="fab fa-youtube"
-            />
+            {socialIconsData.map((item) => {
+              return <SocialIcon key={item.id} {...item} />
+            })}
           </div>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
             inventore aperiam accusamus dignissimos quia! Alias?
           </p>
-        </div>
-        <ul className="links">
-          <Link />
-          <Link />
-          <Link />
-          <Link />
-          <Link />
+        </article>
+        <ul>
+          {footerLinks.map((link) => {
+            return <Link key={link.id} {...link} />
+          })}
         </ul>
         <div className="contact">
           <ContactLine />
         </div>
         <div className="pix">
-          <PixCard img="https://picsum.photos/id/122/700" />
-          <PixCard img="https://picsum.photos/id/132/700" />
-          <PixCard img="https://picsum.photos/id/142/700" />
-          <PixCard img="https://picsum.photos/id/152/700" />
-          <PixCard img="https://picsum.photos/id/162/700" />
-          <PixCard img="https://picsum.photos/id/172/700" />
+          {footerImages.map((image) => {
+            return <PixCard key={image.id} {...image} />
+          })}
         </div>
       </div>
-    </footer>
+    </FooterWrapper>
   )
 }
 
 export default Footer
 
-/* 
-<footer>
-        <div class="container">
-           
-            <div class="contact">
-                        <div class="pix">
+const FooterWrapper = styled.footer`
+  background-color: #191919;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    align-items: start;
+    gap: 50px;
+    padding: 50px 50px 20px;
+  }
 
-                <div class="info-line">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>Egypt, Giza, Inside The Sphinx, Room Number 220
-                    </p>
-                </div>
-                <div class="info-line">
-                    <i class="fas fa-phone"></i>
-                    <p>Business Hours: From 10:00 To 18:00
-                    </p>
-                </div>
-                <div class="info-line">
-                    <i class="far fa-clock"></i>
-                    <p>+20123456789
-                        +20198765432
-                    </p>
-                </div>
-            </div>
-           
-        </div>
-    </footer> */
+  article {
+    .main-logo {
+      font-size: 48px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      color: #fff;
+    }
+    .socials {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 20px;
+      a {
+        border-radius: 2px;
+        &:not(:first-of-type) {
+          margin-left: 15px;
+        }
+        i {
+          border-radius: 2px;
+          width: 48px;
+          font-size: 24px;
+          text-align: center;
+          color: #777;
+          background-color: #333;
+          padding: 10px;
+          transition: 0.5s ease-in-out;
+        }
+        &:hover i {
+          color: #fff;
+        }
+        &:hover:nth-of-type(1) i {
+          background-color: var(--facebook-clr);
+        }
+        &:hover:nth-of-type(2) i {
+          background-color: var(--twitter-clr);
+        }
+        &:hover:nth-of-type(3) i {
+          background-color: var(--youtube-clr);
+        }
+      }
+    }
+  }
+  ul {
+    li {
+      padding: 8px 30px;
+      &:not(:last-of-type) {
+        border-bottom: 1px solid #4a4949;
+      }
+      a {
+        color: #b7b3b3;
+        position: relative;
+        transition: 0.2s ease-in-out;
+        &:before {
+          font-family: "Font Awesome 5 Free";
+          content: "\f101";
+          font-weight: 900;
+          color: var(--main-service-color);
+          margin-right: 10px;
+          position: absolute;
+          left: -25px;
+          top: 8px;
+        }
+      }
+      &:hover a {
+        color: white;
+        transform: translateX(10px);
+      }
+    }
+  }
+  .contact {
+    .info-line {
+      display: flex;
+      align-items: center;
+      i {
+        color: var(--main-service-color);
+      }
+      p {
+        color: #b7b3b3;
+        padding: 10px 0;
+        margin-left: 15px;
+      }
+    }
+  }
+  .pix {
+    img {
+      margin: 3px;
+      border: 3px solid white;
+      width: 75px;
+    }
+  }
+`
