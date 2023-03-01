@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 const Stats = () => {
   return (
-    <StatsWrapper id="stats">
+    <StatsWrapper>
       <SectionTitle title="stats" />
       <div className="container">
         <StatsBox icon="fas fa-users" target="45" title="clients" />

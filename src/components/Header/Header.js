@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import "./header.scss"
+import "../../styles.scss"
 import Navbar from "./Navbar"
 import styled from "styled-components"
 

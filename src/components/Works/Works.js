@@ -7,7 +7,7 @@ import SectionTitle from "../UI/SectionTitle"
 
 const Works = () => {
   return (
-    <WorksWrapper id="works">
+    <WorksWrapper>
       <SectionTitle title="works" />
       <div className="container">
         <figure>

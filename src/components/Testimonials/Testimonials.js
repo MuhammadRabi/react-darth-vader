@@ -5,7 +5,7 @@ import SectionTitle from "../UI/SectionTitle"
 
 const Testimonials = () => {
   return (
-    <TestimonialWrapper id="testimonial">
+    <TestimonialWrapper>
       <SectionTitle title="testimonials" />
       <div className="container">
         {data.map((person) => {

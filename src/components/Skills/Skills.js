@@ -5,7 +5,7 @@ import SectionTitle from "../UI/SectionTitle"
 
 const Skills = () => {
   return (
-    <SkillsWrapper id="skills">
+    <SkillsWrapper>
       <SectionTitle title="skills" />
       <div className="container">
         <img src={skillsBanner} alt="" />
@@ -37,8 +37,8 @@ const SkillsWrapper = styled.section`
   .skills-content {
     padding: 10px 5px;
     flex: 0.75;
-    /*  @include media-breakpoint-up(md) {
+    @media screen and (max-width: 768px) {
       padding: 10px 45px;
-    } */
+    }
   }
 `

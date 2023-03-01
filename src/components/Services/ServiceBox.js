@@ -76,7 +76,9 @@ const Box = styled.div`
       font-weight: 700;
       height: 100%;
       width: 90px;
-      @extend %flex-center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     &:after {
       content: "";
@@ -86,7 +88,7 @@ const Box = styled.div`
       top: 0;
       height: 102%;
       width: 60px;
-      left: 75px;
+      left: 70px;
     }
   }
 `

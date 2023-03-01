@@ -4,7 +4,7 @@ import SectionTitle from "../UI/SectionTitle"
 import styled from "styled-components"
 const Pricing = () => {
   return (
-    <Wrapper id="price-plans">
+    <Wrapper>
       <SectionTitle title="price plans" />
       <div className="container">
         {data.map((plan) => {

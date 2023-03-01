@@ -51,11 +51,12 @@ const Box = styled.article`
   .info {
     padding-left: 50px;
     flex: 3;
-    /*  @include media-breakpoint-down(md) {
-            padding-left: 0;
-            text-align: Center;
-            margin-top: 10px;
-          } */
+    @media screen and (max-width: 768px) {
+      padding-left: 0;
+      text-align: Center;
+      margin-top: 10px;
+    }
+
     h3 {
       margin: 0;
       color: #000;

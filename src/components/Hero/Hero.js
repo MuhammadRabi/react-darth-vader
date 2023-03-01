@@ -9,7 +9,10 @@ const Hero = () => {
           <h1>welcome to React js world</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia,
-            minima?
+            minima? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Officia, minima? Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Officia, minima? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Officia, minima?
           </p>
         </main>
         <figure>
@@ -57,10 +60,19 @@ const Wrapper = styled.section`
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    gap: 50px;
+    main {
+      flex: 1;
+    }
     h1 {
       font-size: clamp(24px, 6vw, 48px);
       text-transform: capitalize;
       color: #000;
+    }
+    figure {
+      flex: 1;
+      margin: 0 auto;
+      text-align: center;
     }
     img {
       position: relative;

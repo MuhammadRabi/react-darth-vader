@@ -37,6 +37,11 @@ const CardWrapper = styled.article`
   margin-bottom: 16px;
   box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
   z-index: 1;
+  @media screen and (min-width: 992px) {
+    &:nth-last-of-type(2) {
+      transform: translateY(-25px);
+    }
+  }
   &:before,
   &:after {
     content: "";
@@ -84,55 +89,54 @@ const CardWrapper = styled.article`
       border-width: 20px;
     }
   }
-  .price{
+  .price {
     text-align: center;
-    padding:12px;
+    padding: 12px;
     h3 {
       font-size: 24px;
       font-weight: 700;
-      color:#000;
-      
+      color: #000;
     }
-    span{
+    span {
       display: block;
-      font-size:48px;
+      font-size: 48px;
       font-weight: 700;
-
     }
 
     .subtitle {
       color: #777;
     }
   }
-    i,
-    span {
-      color: var(--main-service-color);
-    }
-    i {
-      font-size: 64px;
-    }
-    span {
-      margin: 20px 0 10px;
-    }
-    .plan-details {
-      li {
-        border-top: 1px solid #e6e6e7;
-        padding:20px;
-        text-transform: capitalize;
-        text-align: left;
+  i,
+  span {
+    color: var(--main-service-color);
+  }
+  i {
+    font-size: 64px;
+  }
+  span {
+    margin: 20px 0 10px;
+  }
+  .plan-details {
+    li {
+      border-top: 1px solid #e6e6e7;
+      padding: 20px;
+      text-transform: capitalize;
+      text-align: left;
 
-        &::before {
-          font-family: "Font Awesome 5 Free";
-          content: "\f00c";
-          font-weight: 900;
-          color: var(--main-service-color);
-          margin-right: 10px;
-        }
+      &::before {
+        font-family: "Font Awesome 5 Free";
+        content: "\f00c";
+        font-weight: 900;
+        color: var(--main-service-color);
+        margin-right: 10px;
       }
     }
   }
 
   button {
+    font-size: clamp(18px, 1.5vw, 20px);
+    text-transform: capitalize;
     background-color: transparent;
     border: 2px solid var(--main-service-color);
     border-radius: 6px;

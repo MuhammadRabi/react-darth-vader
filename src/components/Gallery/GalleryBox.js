@@ -2,7 +2,7 @@ import styled, { keyframes } from "styled-components"
 
 const GalleryBox = ({ img }) => {
   return (
-    <Wrapper>
+    <GalleryWrapper>
       <div className="box">
         <figure>
           <div className="animation">
@@ -10,7 +10,7 @@ const GalleryBox = ({ img }) => {
           </div>
         </figure>
       </div>
-    </Wrapper>
+    </GalleryWrapper>
   )
 }
 
@@ -28,7 +28,7 @@ const flashing = keyframes`
   }
       `
 
-const Wrapper = styled.div`
+const GalleryWrapper = styled.div`
   .box {
     margin-bottom: 8px;
     padding: 8px;

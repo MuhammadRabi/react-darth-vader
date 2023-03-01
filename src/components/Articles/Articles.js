@@ -5,7 +5,7 @@ import styled from "styled-components"
 
 const Articles = () => {
   return (
-    <ArticlesWrapper id="articles" className="articles">
+    <ArticlesWrapper>
       <SectionTitle title="articles" />
       <div className="container">
         {articlesData.map((article) => {

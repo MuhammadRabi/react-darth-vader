@@ -17,6 +17,6 @@ export const navLinksData = [
   {
     id: 4,
     path: "contact",
-    title: "Contact us",
+    title: "Contact",
   },
 ]

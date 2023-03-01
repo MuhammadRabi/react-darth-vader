@@ -4,7 +4,7 @@ import SectionTitle from "../UI/SectionTitle"
 
 const Services = () => {
   return (
-    <ServiceWrapper id="services">
+    <ServiceWrapper>
       <SectionTitle title="services" />
       <div className="container">
         <ServiceBox icon="fas fa-fingerprint" title="security" />
