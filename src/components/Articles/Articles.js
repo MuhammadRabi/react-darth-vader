@@ -1,7 +1,8 @@
+import styled from "styled-components"
+
 import SectionTitle from "../UI/SectionTitle"
 import ArticleBox from "./ArticleBox"
 import articlesData from "./articlesData"
-import styled from "styled-components"
 
 const Articles = () => {
   return (

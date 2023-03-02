@@ -1,5 +1,6 @@
-import GalleryBox from "./GalleryBox"
 import styled from "styled-components"
+
+import GalleryBox from "./GalleryBox"
 import SectionTitle from "../UI/SectionTitle"
 
 const Gallery = () => {
@@ -16,8 +17,10 @@ const Gallery = () => {
           <GalleryBox img="https://picsum.photos/id/15/700" />
           <GalleryBox img="https://picsum.photos/id/25/700" />
           <GalleryBox img="https://picsum.photos/id/35/700" />
-          <GalleryBox img="https://picsum.photos/id/45/700" />
+          <GalleryBox img="https://picsum.photos/id/46/700" />
           <GalleryBox img="https://picsum.photos/id/57/700" />
+          <GalleryBox img="https://picsum.photos/id/73/700" />
+          <GalleryBox img="https://picsum.photos/id/88/700" />
         </div>
       </section>
     </Wrapper>

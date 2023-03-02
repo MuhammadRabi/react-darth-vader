@@ -1,5 +1,6 @@
-import ServiceBox from "./ServiceBox"
 import styled from "styled-components"
+
+import ServiceBox from "./ServiceBox"
 import SectionTitle from "../UI/SectionTitle"
 
 const Services = () => {

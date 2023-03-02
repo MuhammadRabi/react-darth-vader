@@ -107,7 +107,10 @@ p {
 }
 
 section {
-  padding: 50px;
+  padding: 50px 150px;
+  @media screen and (max-width: 992px) {
+    padding: 50px;
+  }
   @media screen and (max-width: 768px) {
     padding: 20px;
   }

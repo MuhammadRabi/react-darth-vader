@@ -1,9 +1,10 @@
-import SocialIcon from "./SocialIcon"
+import styled from "styled-components"
+
+import { socialIconsData, footerImages, footerLinks } from "./footerData"
 import Link from "./Link"
+import SocialIcon from "./SocialIcon"
 import ContactLine from "./ContactLine"
 import PixCard from "./PixCard"
-import { socialIconsData, footerImages, footerLinks } from "./footerData"
-import styled from "styled-components"
 
 const Footer = () => {
   return (

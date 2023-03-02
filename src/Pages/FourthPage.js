@@ -1,8 +1,8 @@
-import Services from "../components/Services/Services"
+import Wiki from "../components/Wiki"
 function FourthPage() {
   return (
     <>
-      <Services />
+      <Wiki />
     </>
   )
 }

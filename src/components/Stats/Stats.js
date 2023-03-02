@@ -1,6 +1,7 @@
+import styled from "styled-components"
+
 import StatsBox from "./StatsBox"
 import SectionTitle from "../UI/SectionTitle"
-import styled from "styled-components"
 
 const Stats = () => {
   return (

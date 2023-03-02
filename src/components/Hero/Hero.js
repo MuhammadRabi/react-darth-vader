@@ -38,7 +38,7 @@ const upAndDown = keyframes`
         }
       `
 const bouncing = keyframes`
-        0%,
+  0%,
   10%,
   20%,
   50%,

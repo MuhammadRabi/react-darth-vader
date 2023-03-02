@@ -7,7 +7,7 @@ const SkillItem = ({ title, progress }) => {
         {title} <span>{progress}</span>
       </h3>
       <div className="progress">
-        <span data-width={progress}></span>
+        <ProgressBar progress={progress} />
       </div>
     </SkillCard>
   )
@@ -22,9 +22,11 @@ const SkillCard = styled.article`
     display: flex;
     justify-content: space-between;
     span {
+      display: flex;
+      align-items: center;
       border: 1px solid #c9c1c1;
-      padding: 2px 4px;
       font-size: 14px;
+      padding: 0 4px;
       border-radius: 2px;
       color: var(--main-service-color);
     }
@@ -34,14 +36,15 @@ const SkillCard = styled.article`
     height: 30px;
     background-color: #e9e9e9;
     position: relative;
-    span {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 0;
-      background-color: var(--main-service-color);
-      transition: 0.3s ease-in-out;
-    }
   }
+`
+
+const ProgressBar = styled.span`
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--main-service-color);
+  width: ${(props) => props.progress};
+  transition: 1s ease-in-out;
 `

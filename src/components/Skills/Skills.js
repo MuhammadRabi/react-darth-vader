@@ -1,6 +1,8 @@
-import SkillItem from "./SkillItem"
-import skillsBanner from "../../assets/skills.svg"
 import styled from "styled-components"
+
+import skillsBanner from "../../assets/skills.svg"
+
+import SkillItem from "./SkillItem"
 import SectionTitle from "../UI/SectionTitle"
 
 const Skills = () => {
@@ -24,19 +26,19 @@ export default Skills
 
 const SkillsWrapper = styled.section`
   .container {
-    width: 90vw;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    gap: 100px;
+    gap: 50px;
   }
   img {
     width: 300px;
+    flex: 0 1 auto;
   }
   .skills-content {
     padding: 10px 5px;
-    flex: 0.75;
+    flex: 1 0 auto;
     @media screen and (max-width: 768px) {
       padding: 10px 45px;
     }

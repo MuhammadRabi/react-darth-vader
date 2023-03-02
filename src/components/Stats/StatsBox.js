@@ -1,11 +1,12 @@
 import styled from "styled-components"
+import CountUp from "react-countup"
 
 const StatsBox = ({ icon, title, target }) => {
   return (
     <Box>
       <i className={icon}></i>
       <span className="count" data-goal={target}>
-        0
+        <CountUp end={target} />
       </span>
       <span className="name">{title}</span>
     </Box>

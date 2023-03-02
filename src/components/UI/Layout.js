@@ -6,7 +6,6 @@ const Layout = ({ children }) => {
 export default Layout
 
 const PageWrapper = styled.main`
-  padding-right: 30px;
-  padding-left: 30px;
-  margin: auto;
+  padding-right: 50px;
+  padding-left: 50px;
 `

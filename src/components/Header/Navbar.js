@@ -1,7 +1,10 @@
 import React, { useState } from "react"
-import { Link, NavLink } from "react-router-dom"
-import { navLinksData } from "./navbarlinks"
+
 import styled from "styled-components"
+import { Link, NavLink } from "react-router-dom"
+
+import { navLinksData } from "./navbarlinks"
+
 import NavToggle from "./NavToggle"
 
 function Navbar() {

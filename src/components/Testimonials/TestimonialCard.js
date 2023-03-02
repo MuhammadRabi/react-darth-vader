@@ -33,7 +33,6 @@ const Wrapper = styled.div`
   .title {
     display: block;
     text-transform: capitalize;
-    margin: 7px 0 4px;
     font-size: 16px;
   }
   img {

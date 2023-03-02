@@ -1,7 +1,10 @@
-import PricingCard from "./PricingCard"
-import data from "./pricingData"
-import SectionTitle from "../UI/SectionTitle"
 import styled from "styled-components"
+
+import data from "./pricingData"
+
+import PricingCard from "./PricingCard"
+import SectionTitle from "../UI/SectionTitle"
+
 const Pricing = () => {
   return (
     <Wrapper>

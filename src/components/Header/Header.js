@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react"
-import "../../styles.scss"
-import Navbar from "./Navbar"
+
 import styled from "styled-components"
+
+import "../../styles.scss"
+
+import Navbar from "./Navbar"
 
 const Header = () => {
   const [fixedNav, setFixedNav] = useState("false")

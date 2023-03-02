@@ -1,11 +1,11 @@
+import { RouterProvider, createBrowserRouter } from "react-router-dom"
+
 import Homepage from "./Pages/Homepage"
 import ArticlesPage from "./Pages/ArticlesPage"
 import StaffPage from "./Pages/StaffPage"
 import FourthPage from "./Pages/FourthPage"
 import Root from "./Pages/Root"
-import { RouterProvider, createBrowserRouter } from "react-router-dom"
-/* import "./styles.scss"
- */
+
 const App = () => {
   const router = createBrowserRouter([
     {

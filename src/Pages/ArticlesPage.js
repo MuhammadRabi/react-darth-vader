@@ -1,5 +1,6 @@
 import Articles from "../components/Articles/Articles"
 import Services from "../components/Services/Services"
+import Stats from "../components/Stats/Stats"
 import Works from "../components/Works/Works"
 
 const ArticlesPage = () => {
@@ -8,6 +9,7 @@ const ArticlesPage = () => {
       <Articles />
       <Services />
       <Works />
+      <Stats />
     </>
   )
 }
