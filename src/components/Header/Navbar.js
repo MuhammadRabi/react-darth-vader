@@ -23,7 +23,7 @@ function Navbar() {
                 <NavLink
                   to={link.path}
                   className="nav__link"
-                  onClick={() => setMobileNav(!mobileNav)}
+                  onClick={() => setMobileNav(false)}
                 >
                   {link.title}
                 </NavLink>

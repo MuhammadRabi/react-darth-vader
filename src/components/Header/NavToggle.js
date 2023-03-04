@@ -1,11 +1,15 @@
 import styled from "styled-components"
 
 const NavToggle = ({ mobileNav, setMobileNav }) => {
+  const NavToggle = () => {
+    setMobileNav(!mobileNav)
+  }
+
   return (
     <ToggleBtn>
       <div
         className={`nav-toggle ${mobileNav ? "active" : ""}`}
-        onClick={() => setMobileNav(!mobileNav)}
+        onClick={NavToggle}
       >
         <i className="fas fa-bars"></i>
         <i className="fas fa-times"></i>
