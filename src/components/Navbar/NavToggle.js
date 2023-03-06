@@ -23,12 +23,12 @@ const ToggleBtn = styled.div`
   .nav-toggle {
     z-index: 101;
     display: none;
-    @media screen and (max-width: 768px) {
-      display: block;
-    }
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 25px;
+    @media screen and (max-width: 992px) {
+      display: block;
+    }
     i {
       font-size: 24px;
       padding: 5px;

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 
 import styled from "styled-components"
 import { Link, NavLink } from "react-router-dom"
@@ -8,28 +8,40 @@ import { navLinksData } from "./navbarlinks"
 import NavToggle from "./NavToggle"
 
 function Navbar() {
+  const [fixedNav, setFixedNav] = useState(false)
+
+  const handleScroll = () => {
+    window.scrollY > 300 ? setFixedNav(true) : setFixedNav(false)
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
   const [mobileNav, setMobileNav] = useState(false)
 
   return (
     <>
-      <Nav>
+      <Nav className={fixedNav ? "fixed-nav" : ""}>
         <Link to="/">
           <p className="logo">ELZERO</p>
         </Link>
         <ul className={`nav__list ${mobileNav ? "active" : ""}`}>
-          {navLinksData.map((link) => {
-            return (
-              <li key={link.id} className="nav__item">
-                <NavLink
-                  to={link.path}
-                  className="nav__link"
-                  onClick={() => setMobileNav(false)}
-                >
-                  {link.title}
-                </NavLink>
-              </li>
-            )
-          })}
+          {navLinksData.map(({ id, path, title }) => (
+            <li key={id} className="nav__item">
+              <NavLink
+                to={path}
+                className="nav__link"
+                onClick={() => setMobileNav(false)}
+              >
+                {title}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </Nav>
       <NavToggle mobileNav={mobileNav} setMobileNav={setMobileNav} />
@@ -43,7 +55,16 @@ const Nav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  @media screen and (max-width: 768px) {
+  &.fixed-nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    background-color: #fff;
+    box-shadow: 0 0 10px #ddd;
+  }
+
+  @media screen and (max-width: 992px) {
     justify-content: space-between;
   }
   .logo {
@@ -63,7 +84,7 @@ const Nav = styled.nav`
     justify-content: center;
     align-items: center;
     flex: 0.5;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 992px) {
       position: fixed;
       top: -100%;
       left: 0;
@@ -114,7 +135,7 @@ const Nav = styled.nav`
         &.active:after {
           width: 100%;
         }
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 992px) {
           font-size: 24px;
         }
       }

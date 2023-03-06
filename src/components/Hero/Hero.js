@@ -8,11 +8,12 @@ const Hero = () => {
         <main>
           <h1>welcome to React js world</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia,
-            minima? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Officia, minima? Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Officia, minima? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Officia, minima?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit
+            eligendi harum distinctio saepe. Consequuntur a quas animi rerum
+            labore consectetur itaque doloremque enim quisquam explicabo!
+            Voluptas animi ex ut incidunt facere sit ipsam dicta beatae adipisci
+            et quas nihil quibusdam atque accusantium, velit, ipsum natus
+            commodi
           </p>
         </main>
         <figure>
@@ -59,28 +60,30 @@ const Wrapper = styled.section`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 50px;
-    main {
-      flex: 1;
+    gap: 20px;
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
     }
-    h1 {
-      font-size: clamp(24px, 6vw, 48px);
-      text-transform: capitalize;
-      color: #000;
+    main {
+      padding: 10px 50px;
+      h1 {
+        font-size: clamp(24px, 6vw, 48px);
+        text-transform: capitalize;
+        color: #000;
+      }
     }
     figure {
-      flex: 1;
       margin: 0 auto;
       text-align: center;
+      @media screen and (max-width: 1200px) {
+        display: none;
+      }
     }
     img {
       position: relative;
-      width: 500px;
+      width: 400px;
+
       animation: ${upAndDown} 5s linear infinite;
-      @media screen and (max-width: 768px) {
-        width: 300px;
-      }
     }
     .go-down {
       position: absolute;
@@ -94,19 +97,3 @@ const Wrapper = styled.section`
     }
   }
 `
-
-/* function scrollToRef(ref) {
-  ref.current.scrollIntoView({ behavior: "smooth" })
-}
-
-
-  const myRef = useRef(null)
-
-  return (
-    <div>
-      <section ref={myRef}>Scroll to me</section>
-      <button onClick={() => scrollToRef(myRef)}>Scroll to section</button>
-    </div>
-  )
-
- */

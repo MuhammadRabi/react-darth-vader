@@ -13,13 +13,12 @@ const Works = () => {
       <SectionTitle title="works" />
       <div className="container">
         <figure>
-          <img src={img1} alt="" />
+          <img src={img1} alt="work-section" />
         </figure>
         <div className="boxes-area">
           <WorksCard img={img1} title="Archeticture" />
           <WorksCard img={img2} title="planning strategy" />
           <WorksCard img={img3} title="business analysis" />
-          duck ant malek tap boy girl bobby play
         </div>
       </div>
     </WorksWrapper>
@@ -32,14 +31,16 @@ const WorksWrapper = styled.section`
   background-color: #e6e6e7;
   .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    gap: 50px;
-    flex-wrap: wrap-reverse;
+    gap: 100px;
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+    }
   }
   figure {
-    width: 300px;
     margin: auto;
+    width: 400px;
     img {
       max-width: 100%;
     }

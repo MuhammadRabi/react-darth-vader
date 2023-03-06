@@ -1,5 +1,6 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
 
+import "./styles.scss"
 import Homepage from "./Pages/Homepage"
 import ArticlesPage from "./Pages/ArticlesPage"
 import StaffPage from "./Pages/StaffPage"

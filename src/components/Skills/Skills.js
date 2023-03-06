@@ -29,17 +29,20 @@ const SkillsWrapper = styled.section`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 50px;
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+      gap: 30px;
+    }
+    gap: 150px;
   }
   img {
     width: 300px;
-    flex: 0 1 auto;
   }
   .skills-content {
     padding: 10px 5px;
-    flex: 1 0 auto;
-    @media screen and (max-width: 768px) {
+    flex: 1;
+    @media screen and (max-width: 992px) {
+      width: 100%;
       padding: 10px 45px;
     }
   }

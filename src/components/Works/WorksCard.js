@@ -26,9 +26,15 @@ const Box = styled.article`
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  padding: 30px;
+  padding: 20px 30px;
   position: relative;
   z-index: 1;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    /*   padding-left: 0;
+    text-align: Center;
+    margin-top: 10px; */
+  }
   &:before {
     content: "";
     position: absolute;
@@ -52,8 +58,10 @@ const Box = styled.article`
     padding-left: 50px;
     flex: 3;
     @media screen and (max-width: 768px) {
-      padding-left: 0;
+      display: flex;
+      flex-direction: column;
       text-align: Center;
+      padding-left: 0;
       margin-top: 10px;
     }
 
