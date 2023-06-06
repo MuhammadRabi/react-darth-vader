@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 const WorksCard = ({ img, title }) => {
   return (
@@ -12,10 +12,10 @@ const WorksCard = ({ img, title }) => {
         </p>
       </div>
     </Box>
-  )
-}
+  );
+};
 
-export default WorksCard
+export default WorksCard;
 
 const Box = styled.article`
   background-color: #f6f6f6;
@@ -74,4 +74,4 @@ const Box = styled.article`
       color: #777;
     }
   }
-`
+`;
